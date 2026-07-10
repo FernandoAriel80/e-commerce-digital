@@ -1,0 +1,93 @@
+.login-register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.login-register-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-width: 180px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.login-register-form-input {
+    margin: 30px;
+    width: 100%;
+}
+
+.login-register-form-btn {
+    border: none;
+    padding: 10px 13px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    color: var(--light-color);
+}
+
+.login-register-form-btn:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.auth-a-form {
+    transition: var(--transition);
+}
+
+.auth-a-form a:hover {
+    color: var(--primary-color);
+}
+
+.auth-google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--dark-color);
+}
+
+.auth-google-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.auth-container-links {
+    padding: 10px 0;
+}
+
+.form-captcha-btn {
+    padding: 7px 0;
+}
+
+.logo-link-index {
+    width: 100px;
+    height: 100px;
+}
+
+.auth-container-form {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {}
+
+/* Ajustes para PC */
+@media (min-width: 1024px) {
+    .login-register-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-width: 400px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+    }
+
+}

@@ -1,0 +1,35 @@
+.input-form-container {
+    display: flex;
+    padding: 3px 0;
+}
+
+.input-form-input {
+    width: 100%;
+    padding: 7px 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.form-span-error {
+    color: var(--error-text-light);
+}
+
+.toggle-password {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password img {
+
+    width: 20px;
+    height: 20px;
+    padding: 0 2px;
+}
+
+.toggle-password img:hover {
+    cursor: pointer;
+}
+
+/* .input-form-input:focus {
+    border: 1px solid var(--tertiary-color);
+} */

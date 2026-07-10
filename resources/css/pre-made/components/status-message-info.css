@@ -1,0 +1,30 @@
+.status-message-info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.status-error-message,
+.status-status-message,
+.status-success-message {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.status-error-message {
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-text-dark);
+    color: var(--error-text-dark);
+}
+
+.status-status-message {
+    background-color: var(--status-bg);
+    border: 1px solid var(--status-text-dark);
+    color: var(--status-text-dark);
+}
+
+.status-success-message {
+    background-color: var(--success-bg);
+    border: 1px solid var(--success-text-dark);
+    color: var(--success-text-dark);
+}

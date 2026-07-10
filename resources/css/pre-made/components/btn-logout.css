@@ -1,0 +1,23 @@
+.btn-header-logout-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-header-logout {
+    color: var(--light-color);
+    padding: 9px;
+    transition: var(--transition);
+    background-color: var(--primary-color);
+    width: 100%;
+    border-radius: 10px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-header-logout:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}

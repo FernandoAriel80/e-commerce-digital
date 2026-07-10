@@ -1,0 +1,25 @@
+{
+    "Hello!": "¡Hola!",
+    "Regards": "Saludos",
+    "Reset Password": "Restablecer Contraseña",
+    "You are receiving this email because we received a password reset request for your account.": "Has recibido este correo porque solicitaste restablecer la contraseña de tu cuenta.",
+    "This password reset link will expire in :count minutes.": "Este enlace para restablecer la contraseña expirará en :count minutos.",
+    "If you did not request a password reset, no further action is required.": "Si no solicitaste restablecer tu contraseña, no se requiere ninguna acción adicional.",
+    "If you're having trouble clicking the \":actionText\" button, copy and paste the URL below into your web browser:": "Si tienes problemas para hacer clic en el botón \":actionText\", copia y pega la siguiente URL en tu navegador:",
+    "Reset Password Notification": "Notificación de Restablecimiento de Contraseña",
+
+
+    "Verify Email Address": "Verificar Correo Electrónico",
+    "Verify Your Email Address": "Verifica tu Correo Electrónico",
+    "Please click the button below to verify your email address.": "Por favor, haz clic en el botón de abajo para verificar tu dirección de correo electrónico.",
+    "If you did not create an account, no further action is required.": "Si no creaste una cuenta, no se requiere ninguna acción adicional.",
+
+
+
+    "Your download is ready": "Tu descarga está lista",
+    "Click here to download": "Haz clic aquí para descargar",
+    "This link will expire in :days days.": "Este enlace expirará en :days días.",
+    
+    "Payment confirmed": "Pago confirmado",
+    "Your payment has been successfully processed.": "Tu pago ha sido procesado exitosamente."
+}

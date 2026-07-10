@@ -1,0 +1,19 @@
+ .list-header-table {
+     background-color: var(--primary-color);
+ }
+
+ .list-header-table tr th {
+     padding: 10px;
+     text-align: center;
+     color: var(--light-color);
+ }
+
+ .list-body-table tr td {
+     padding: 10px;
+     text-align: center;
+     border-bottom: 1px solid var(--primary-color);
+     max-width: 150px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+ }

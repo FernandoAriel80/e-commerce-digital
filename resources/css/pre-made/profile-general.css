@@ -1,0 +1,69 @@
+.profile-container {
+    display: flex;
+}
+
+.profile-data-side {
+    width: 100%;
+    text-align: center;
+}
+
+.profile-data-side-general-data,
+.profile-data-side-change-password,
+.profile-data-side-delete-account {
+    justify-items: center;
+}
+
+.profile-data-side-general-data-container,
+.profile-data-side-change-password-container,
+.profile-data-side-delete-account-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.profile-data-side-general-data div {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-data-side-change-password-form {
+    text-align: left;
+}
+
+.profile-data-side-change-password-form button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.profile-data-side-delete-account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-data-side-delete-account-container p {
+    margin: 10px;
+}
+
+@media (min-width: 768px) {}
+
+/* Ajustes para PC */
+@media (min-width: 1024px) {
+
+    .profile-data-side-general-data-container,
+    .profile-data-side-change-password-container {
+        width: 50%;
+    }
+
+    .profile-data-side-delete-account-container p {
+        width: 50%;
+    }
+}

@@ -1,0 +1,76 @@
+.profile-menu-side-container {
+    display: block;
+    background-color: var(--primary-color);
+    z-index: 10;
+    top: 0;
+    height: 100%;
+    position: relative;
+}
+
+.profile-menu-side-btn {
+    display: flex;
+    max-height: 40px;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.profile-menu-side-icon-btn {
+    display: flex;
+}
+
+.profile-menu-btn {
+    display: flex;
+    color: var(--light-color);
+    min-width: 150px;
+    justify-content: center;
+    padding: 10px 0;
+    transition: var(--transition);
+
+}
+
+.profile-menu-side-container-children {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 9;
+    top: 30;
+
+}
+
+.profile-menu-btn:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.profile-menu-side-data {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+
+@media (min-width: 768px) {}
+
+/* Ajustes para PC */
+@media (min-width: 1024px) {
+    .profile-menu-side-container {
+        display: flex;
+        height: 100ch;
+        z-index: 9;
+        top: 0;
+        padding-top: 0;
+    }
+
+    .profile-menu-side-btn {
+        display: none;
+    }
+
+    .profile-menu-side-data {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-menu-side-container-children {
+        position: static;
+    }
+}
