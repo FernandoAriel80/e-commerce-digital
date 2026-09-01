@@ -1,14 +1,12 @@
 .btn-abrir {
-    background: var(--error-text-light);
+    background-color: var(--error-text-light);
     color: var(--light-color);
     border: none;
-    padding: 14px 32px;
     border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    padding: 4px;
+    font-size: 14px;
     cursor: pointer;
     transition: background 0.2s;
-    box-shadow: 0 4px 8px var(--error-text-dark);
 }
 
 .btn-abrir:hover {

@@ -19,10 +19,9 @@ class ProfileService
     public function getDataUser()
     {
         $user = Auth::user();
-        /*   $user = $this->userRepository->getById($id);
-        if (!$user) throw new Exception('Usuario no encontrado.'); */
 
         $payload = [
+            'id' => $user->id,
             'name' => $user->first_name . $user->last_name,
             'email' => $user->email,
             'is_verified' => $user->email_verified_at !== null ? true : false,

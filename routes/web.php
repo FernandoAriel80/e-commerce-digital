@@ -42,12 +42,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/eliminar-cuenta', fn() => view('pages.profile.delete'))->name('delete.view');
     Route::delete('/eliminar-cuenta', [ProfileController::class, 'delete'])->name('delete.account');
-
-    Route::middleware('role:admin')->group(function () {
-        Route::get('/panel-administrativo', fn() => view('pages.admin.dashboard-general'))->name('dashboard.general');
-        Route::get('/panel-usuarios', [AdminController::class, 'panelUsers'])->name('dashboard.user');
-        Route::get('/panel-usuarios-busqueda', [AdminController::class, 'panelUsersSearch'])->name('dashboard.user.search');
-    });
+    
 });
 
 
