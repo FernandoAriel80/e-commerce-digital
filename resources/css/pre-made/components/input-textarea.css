@@ -1,0 +1,8 @@
+.input-textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-textarea-input {
+    margin: 3px;
+}

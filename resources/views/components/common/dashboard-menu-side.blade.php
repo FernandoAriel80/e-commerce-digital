@@ -12,6 +12,9 @@
             <li>
                 <a class="dashboard-menu-btn" href="{{ route('dashboard.user') }}">Usuarios</a>
             </li>
+            <li>
+                <a class="dashboard-menu-btn" href="{{ route('dashboard.category') }}">Categorias</a>
+            </li>
         </ul>
     </div>
 

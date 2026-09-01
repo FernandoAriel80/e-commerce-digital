@@ -6,7 +6,7 @@
               <x-common.search :search="request('search')" :url_to="route('dashboard.user.search')" :back_to="route('dashboard.user')" placeholder="Buscar usuario.." />
               <h3>usuarios</h3>
 
-              <x-common.list-table :header_list="['N°','Name','Email','Fecha de creación',]">
+              <x-common.list-table :header_list="['N°','Nombre','Correo','Fecha de creación',]">
                   @foreach ( $users as $user )
                   <tr>
                       <td>{{$loop->index + 1 }}</td>
@@ -16,7 +16,6 @@
                   </tr>
                   @endforeach
               </x-common.list-table>
-
 
               <x-common.pagination :objects="$users" />
           </div>

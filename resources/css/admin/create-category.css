@@ -1,0 +1,41 @@
+.create-category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-category-btn-back {
+    text-align: left;
+    width: 100%;
+}
+
+.create-category-btn-back a {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-category-btn-back a:hover {
+    background-color: var(--secondary-color);
+}
+
+.create-category-form {
+    width: 90%;
+    margin-top: 30px;
+}
+
+.create-category-form button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-category-form button:hover {
+    background-color: var(--secondary-color);
+}

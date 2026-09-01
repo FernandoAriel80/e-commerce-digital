@@ -1,4 +1,5 @@
 @props([
+'id' => '',
 'btn_name',
 'url_to',
 'url_back',
@@ -6,18 +7,20 @@
 'title'
 ])
 
-<button class="btn-abrir" id="abrirModalBtn">{{ $btn_name }}</button>
+<button class="btn-abrir" id="abrirModalBtn{{ $id }}">{{ $btn_name }}</button>
 
-<div class="modal-overlay" id="modalEliminar">
+<div class="modal-overlay" id="modalEliminar{{ $id }}">
     <div class="modal-contenedor">
         <h2>{{ $title }}</h2>
-        <p>
-            {{ $text }}
-        </p>
+        <p>{{ $text }}</p>
 
         <div class="modal-acciones">
-            <button class="btn-cerrar" id="cerrarModalBtn">Cancelar</button>
-            <button class="btn-eliminar" id="eliminarBtn">Eliminar</button>
+            <button class="btn-cerrar" id="cerrarModalBtn{{ $id }}">Cancelar</button>
+            <form id="formEliminar{{ $id }}" method="POST" action="{{ $url_to }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn-eliminar" id="eliminarBtn{{ $id }}">Eliminar</button>
+            </form>
         </div>
 
         <div class="modal-pie">¿Estás seguro?</div>
@@ -26,10 +29,11 @@
 
 <script>
     (function() {
-        const modal = document.getElementById('modalEliminar');
-        const abrirBtn = document.getElementById('abrirModalBtn');
-        const cerrarBtn = document.getElementById('cerrarModalBtn');
-        const eliminarBtn = document.getElementById('eliminarBtn');
+        const modal = document.getElementById('modalEliminar{{ $id }}');
+        const abrirBtn = document.getElementById('abrirModalBtn{{ $id }}');
+        const cerrarBtn = document.getElementById('cerrarModalBtn{{ $id }}');
+        const form = document.getElementById('formEliminar{{ $id }}');
+        const eliminarBtn = document.getElementById('eliminarBtn{{ $id }}');
 
         function abrirModal() {
             modal.classList.add('activo');
@@ -40,7 +44,6 @@
         }
 
         abrirBtn.addEventListener('click', abrirModal);
-
         cerrarBtn.addEventListener('click', cerrarModal);
 
         modal.addEventListener('click', function(e) {
@@ -49,40 +52,12 @@
             }
         });
 
-        eliminarBtn.addEventListener('click', function() {
-            const url = '{{ $url_to }}';
-
-            eliminarBtn.textContent = 'Enviando...';
+        // El formulario se envía normalmente con DELETE
+        form.addEventListener('submit', function(e) {
+            eliminarBtn.textContent = 'Eliminando...';
             eliminarBtn.disabled = true;
-
-            fetch(url, {
-                    method: 'DELETE',
-                    /*  headers: {
-                         'Content-Type': 'application/json',
-                         // si necesitas token u otros headers, agrégalos aquí
-                         // 'Authorization': 'Bearer tu-token'
-                     },
-                     // body: JSON.stringify({ motivo: 'prueba' }) */
-                })
-                .then(({
-                    data,
-                    ok,
-                    status
-                }) => {
-                    if (ok) {
-                        cerrarModal();
-                        window.location.href = '{{ route("login") }}';
-                    } else {
-                        window.location.href = '{{ $url_back }}';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error DELETE:', error);
-                })
-                .finally(() => {
-                    eliminarBtn.textContent = 'Eliminar';
-                    eliminarBtn.disabled = false;
-                });
+            // El formulario se envía automáticamente
         });
+
     })();
 </script>

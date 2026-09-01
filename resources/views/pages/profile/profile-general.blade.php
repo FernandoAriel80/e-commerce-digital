@@ -45,7 +45,6 @@
                       <span>Eliminar cuenta</span>
                       <p>Advertencia: Al eliminar esta cuenta, perderás el acceso permanente a todos tus datos,
                           historial, configuraciones y contenido asociado.</p>
-                      <!-- <a href="{{ route('delete.view') }}">Eliminar la cuenta</a> -->
                       <x-common.form.btn-delete-selection
                           btn_name="Eliminar cuenta"
                           title="Eliminar cuenta"

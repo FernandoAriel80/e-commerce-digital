@@ -17,6 +17,9 @@
 @import './pre-made/components/pagination.css';
 @import './pre-made/components/search.css';
 @import './pre-made/components/list-table.css';
+@import './pre-made/components/input-textarea.css';
+@import './admin/create-category.css';
+@import './admin/dashboard-category.css';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
